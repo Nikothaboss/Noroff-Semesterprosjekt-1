@@ -1,8 +1,8 @@
 /* ! Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans&family=Titillium+Web:ital@0;1&display=swap");
-/* font-family: 'Nunito', sans-serif; (h1)*/
-/* font-family: 'Open Sans', sans-serif; (p) */
-/* font-family: 'Titillium Web', sans-serif; (h2) */
+/*. font-family: 'Nunito', sans-serif; (h1) */
+/*. font-family: 'Open Sans', sans-serif; (p) */
+/*. font-family: 'Titillium Web', sans-serif; (h2) */
 
 /* ! Base Styles */
 * {
@@ -18,8 +18,49 @@
   --yellow-style: #e39b1f;
 }
 
+body {
+  background: var(--white-bg);
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ? Color Classes */
+
 .dark {
   color: var(--dark-bg);
+}
+
+.dark-bg {
+  background: var(--dark-bg);
+}
+
+.white {
+  color: var(--white-bg);
+}
+
+.white-bg {
+  background: var(--white-bg);
 }
 
 .red {
@@ -32,37 +73,6 @@
 
 .blue {
   color: #004ace;
-}
-
-h1 {
-  font-family: "Nunito", sans-serif;
-  font-size: 30px;
-}
-
-h2 {
-  font-family: "Titillium Web", sans-serif;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  font-family: "Open Sans", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
-
-body {
-  background: var(--white-bg);
 }
 
 /* ! Header */
@@ -86,7 +96,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  grid-column: 4;
+  grid-column: 3;
 }
 
 nav {
@@ -100,6 +110,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
 /* ! index.html */
@@ -107,17 +118,16 @@ nav {
   background-image: url(/media/science-museum-large.jpg);
   background-repeat: no-repeat;
   background-position: center;
-
   background-size: cover;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .headline {
   background: #29323ccb;
-  width: 100%;
-
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,6 +145,7 @@ nav {
   font-size: 16px;
   margin: 20px 0;
   line-height: 1.8;
+  max-width: 75%;
 }
 
 .btn {
@@ -168,9 +179,12 @@ nav {
   align-items: center;
 }
 
+/*? News and cards */
 .news {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .news-headline {
@@ -189,22 +203,48 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 320px;
-  margin-bottom: 30px;
-  padding: 0 20px;
+  width: 100%;
+  /* margin-bottom: 30px; */
+  padding: 30px 20px;
 }
 
 .card-container h2 {
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   text-align: center;
   text-decoration: underline;
 }
 
+.card {
+  max-width: 425px;
+}
+
+/*. 3 diffrent img containers mby change this? */
 .img-container {
   background: url(/media/prof.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 320px;
+  background-position: center;
+  max-width: 425px;
+  height: 200px;
+  box-shadow: 0 0px 0px 1px #000;
+}
+
+.img-container2 {
+  background: url(/media/night-at-museum.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -200px;
+  max-width: 425px;
+  height: 200px;
+  box-shadow: 0 0px 0px 1px #000;
+}
+
+.img-container3 {
+  background: url(/media/light-bulb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 425px;
   height: 200px;
   box-shadow: 0 0px 0px 1px #000;
 }
@@ -229,5 +269,38 @@ nav {
 
   nav {
     display: flex;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .headline {
+    margin-top: 100px;
+    max-width: 600px;
+  }
+
+  .headline p {
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 949px) {
+  .news-headline {
+    background: var(--white-bg);
+    color: var(--red-style);
+  }
+
+  .news {
+    flex-direction: row;
+  }
+
+  .card-container {
+    background: var(--dark-bg);
+    border: 1px solid var(--dark-bg);
+  }
+
+  .card-container h2 {
+    color: var(--white-bg);
   }
 }
