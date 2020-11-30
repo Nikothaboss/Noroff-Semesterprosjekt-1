@@ -110,6 +110,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-weight: 600;
   font-family: "Titillium Web", sans-serif;
 }
 
@@ -259,6 +260,29 @@ nav {
 .card-text p {
   width: 90%;
   margin: auto;
+}
+
+/* ! explore.html */
+.explore-headline {
+  font-size: 25px;
+  max-width: 90%;
+  margin: 30px auto 30px auto;
+  text-align: center;
+}
+
+.explore-showcase p {
+  max-width: 80%;
+  margin: 0 auto 50px auto;
+  font-weight: 600;
+  text-align: center;
+}
+
+.explore-together {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4px;
 }
 
 /* ! Media Queries */
