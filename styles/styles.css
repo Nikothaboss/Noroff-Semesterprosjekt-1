@@ -293,6 +293,10 @@ nav {
   margin-top: -5px;
 }
 
+.tablet-bg {
+  display: none;
+}
+
 .desktop-bg {
   display: none;
 }
@@ -305,8 +309,8 @@ nav {
   margin-top: 20px;
 }
 
-.category h1 {
-  margin-top: 20px;
+.category-text h1 {
+  margin-bottom: 30px;
 }
 
 .info-pic-wrapper {
@@ -320,6 +324,7 @@ nav {
   width: 90%;
   margin-bottom: 30px;
   margin-top: 20px;
+  border-radius: 30px;
 }
 
 .category-text {
@@ -383,56 +388,45 @@ nav {
 
 .sitemap h2 {
   text-align: center;
-  margin-right: 165px;
 }
 
 .opening-hrs {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
 }
 
-.opening-hrs h2 {
-  margin-top: 30px;
-  margin-right: 137px;
-}
-
-.hrs {
-  margin-right: 70px;
-  margin-bottom: 30px;
-}
-
-.opening-hrs p {
-  margin: 20px 0;
-}
-
-.admissions h2 {
-  text-align: center;
-  margin-right: 162px;
-  margin-top: 30px;
-}
-
-.admission-info {
+.info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
+  width: 80%;
 }
 
-.admissions p {
-  width: 260px;
-  margin-top: 20px;
+.info h2 {
+  margin: 20px 0;
+}
+
+.info p {
+  line-height: 2;
+  margin-bottom: 20px;
+  max-width: 400px;
+  font-weight: 500;
 }
 
 /* ! Media Queries */
 @media (min-width: 500px) {
-  .desktop-bg {
+  /* ! explore.html */
+  .tablet-bg {
     display: block;
   }
 
   .mobile-bg {
+    display: none;
+  }
+
+  .desktop-bg {
     display: none;
   }
 
@@ -446,6 +440,7 @@ nav {
 }
 
 @media (min-width: 768px) {
+  /* ! header */
   .hamburger {
     display: none;
   }
@@ -454,6 +449,7 @@ nav {
     display: flex;
   }
 
+  /* ! index.html */
   .mobile-nav {
     display: none;
   }
@@ -476,7 +472,7 @@ nav {
     display: none;
   }
 
-  .desktop-bg {
+  .tablet-bg {
     display: block;
   }
 
@@ -517,6 +513,21 @@ nav {
   /* ! explore.html */
 
   .explore-showcase p {
-    max-width: 50%;
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1300px) {
+  /* !explore.html */
+  .category img {
+    width: 30%;
+  }
+
+  .tablet-bg {
+    display: none;
+  }
+
+  .desktop-bg {
+    display: block;
   }
 }
