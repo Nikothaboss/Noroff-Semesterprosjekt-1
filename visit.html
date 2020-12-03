@@ -36,19 +36,19 @@
             <h2 class="red">On this site</h2>
             <div class="links-container">
                 <ul class="links">
-                    <li>Location</li>
-                    <li>Admission</li>
-                    <li>Hours</li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#admisson">Admission</a></li>
+                    <li><a href="#hours">Hours</a></li>
                 </ul>
                 <ul class="links">
-                    <li>Accsessibility</li>
-                    <li>Food and drinks</li>
-                    <li>Shop</li>
+                    <li><a href="#accsessibility">Accsessibility</a></li>
+                    <li><a href="#cafe">Food and drinks</a></li>
+                    <li><a href="#shop">Shop</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="opening-hrs dark-bg white">
+        <div class="opening-hrs dark-bg white" id="hours">
             <div class="info">
                 <h2 class="yellow">Opening Hours</h2>
                 <p>Monday: Closed</p>
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class="admissions">
+        <div class="admissions" id="admission">
             <div class="info">
                 <h2 class="red">Admissions</h2>
                 <p>The entrance to the museum is free for everyone!</p>
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="accessibility dark-bg">
+        <div class="accessibility dark-bg" id="accsessibility">
             <div class="info white">
                 <h2 class="yellow">Accsessibility</h2>
                 <p>The museum has wheelchair accessibility rapms. It also has 
@@ -84,7 +84,7 @@
             </div>
         </div>
 
-        <div class="cafe">
+        <div class="cafe" id="cafe">
             <div class="info">
                 <h2 class="red">Food and drink</h2>
                 <p>There is a café attached to the museum where you can get 
@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <div class="shop dark-bg">
+        <div class="shop dark-bg" id="shop">
             <div class="info white">
                 <h2 class="yellow">Shop</h2>
                 <p>Our shop offers a range of memorabilia from the museum as well 
@@ -103,14 +103,17 @@
             </div>
         </div>
 
-        <div class="location">
-            <div class="info">
-                <h2 class="red">Location</h2>
-                <div class="gmap_canvas">
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=noroff%20bergen&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://embedgooglemap.net/139/"></a>
+        
+            <div class="location" id="location">
+                <div class="mapouter">
+                    <h2 class="red">Location</h2>
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=noroff%20bergen&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                        <a href="https://embedgooglemap.net/mapv2/"></a>
+                    </div>
+                </div>
             </div>
-        </div>
     </main>
 
 </body>
