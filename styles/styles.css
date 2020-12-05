@@ -129,6 +129,21 @@ nav {
   transition: 0.3s;
 }
 
+/* ! footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid var(--dark-bg);
+}
+
+.social-media {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
 /* ! index.html */
 .homepage-showcase {
   background-image: url(/media/museum-hq.jpg);
@@ -436,7 +451,7 @@ nav {
   line-height: 2;
   margin-bottom: 20px;
   width: 100%;
-  font-weight: 550;
+  font-weight: 500;
 }
 
 .opening-hrs p {
