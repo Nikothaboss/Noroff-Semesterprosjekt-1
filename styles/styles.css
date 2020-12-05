@@ -84,6 +84,7 @@ a {
 header {
   display: grid;
   grid-template-columns: 5% 3fr 1fr 5%;
+  border-bottom: 1px solid var(--dark-bg);
 }
 
 .hamburger {
@@ -120,6 +121,12 @@ nav {
 
 .navbar a {
   color: var(--dark-bg);
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid var(--dark-bg);
+  transition: 0.3s;
 }
 
 /* ! index.html */
@@ -273,13 +280,13 @@ nav {
 .explore-headline {
   font-size: 25px;
   max-width: 90%;
-  margin: 30px auto 30px auto;
+  margin: 70px auto 30px auto;
   text-align: center;
 }
 
 .explore-showcase p {
   max-width: 80%;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 100px auto;
   font-weight: 600;
   text-align: center;
 }
@@ -465,7 +472,7 @@ iframe {
   border: none;
 }
 
-/* ! exhibition.html */
+/* ! exhibition.html / get-involved.html */
 .exhibition-showcase {
   background: url(/media/exhibition.jpg);
   background-position: center;
@@ -496,29 +503,29 @@ iframe {
   margin-bottom: 20px;
 }
 
-.exhibitions img {
+.article img {
   width: 80%;
   margin: 40px auto 20px auto;
 }
 
-.exhibition {
+.article {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.exhibition-text {
+.article-text {
   margin: 0 auto 20px auto;
 }
 
-.exhibition p {
+.article p {
   width: 80%;
   margin: auto;
   margin-bottom: 10px;
   line-height: 1.8;
 }
 
-.exhibition h2 {
+.article h2 {
   width: 80%;
   margin: 20px auto;
 }
@@ -533,33 +540,6 @@ iframe {
 
 .involved-headline h1 {
   font-size: 50px;
-}
-
-.involved-options img {
-  width: 80%;
-  margin: 40px auto 20px auto;
-}
-
-.option {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.option-text {
-  margin: 0 auto 20px auto;
-}
-
-.option-text p {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 10px;
-  line-height: 1.8;
-}
-
-.option-text h2 {
-  width: 80%;
-  margin: 20px auto;
 }
 
 /* ! Media Queries */
@@ -676,12 +656,12 @@ iframe {
     margin-top: 40px;
   }
 
-  /* ! exhibition */
-  .exhibition {
+  /* ! exhibition / get-involved.html */
+  .article {
     flex-direction: row-reverse;
   }
 
-  .exhibition img {
+  .article img {
     width: 40%;
     max-width: 637px;
     margin-right: 20px;
@@ -752,12 +732,12 @@ iframe {
     color: var(--yellow-style);
   }
 
-  /* ! exhibition.html */
-  .exhibition p {
+  /* ! exhibition.html / get-involved.html */
+  .article p {
     max-width: 750px;
   }
 
-  .exhibition img {
+  .article img {
     margin-right: 50px;
   }
 }
