@@ -16,6 +16,7 @@
   --dark-bg: #29323c;
   --red-style: #ab0045;
   --yellow-style: #e39b1f;
+  --footer-bg: #0c1e35;
 }
 
 body {
@@ -63,6 +64,10 @@ a {
   background: var(--white-bg);
 }
 
+.footer-bg {
+  background: var(--footer-bg);
+}
+
 .red {
   color: var(--red-style);
 }
@@ -83,14 +88,61 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 5% 3fr 1fr 5%;
+  grid-template-columns: 10% 3fr 1fr 5%;
 }
 
 .hamburger {
   display: flex;
   align-items: center;
   padding-left: 20px;
+  cursor: pointer;
 }
+
+/* . hamburger slider JAVASCRIPT */
+.dropdown-menu {
+  background: var(--dark-bg);
+  width: 50%;
+  position: absolute;
+  height: 92vh;
+  top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+  z-index: 6;
+}
+
+.dropdown-menu-active {
+  transform: translateX(0%);
+}
+
+.dropdown-menu li {
+  opacity: 0;
+  margin-bottom: 140px;
+}
+
+.dropdown-menu > :last-child {
+  margin-bottom: 0px;
+}
+
+.dropdown-menu a {
+  color: var(--white-bg);
+}
+
+@keyframes dropdownLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/* . slider slutt */
 
 .logo img {
   width: 75px;
@@ -133,7 +185,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 1px solid var(--white-bg);
+  /* border-top: 1px solid var(--white-bg); */
 }
 
 .social-media {
@@ -463,6 +515,10 @@ footer {
   width: 80%;
   margin: 10px auto;
   text-align: center;
+}
+
+.location h2 {
+  margin-top: 20px;
 }
 
 .mapouter {
