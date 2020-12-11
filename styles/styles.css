@@ -650,6 +650,10 @@ iframe {
     display: flex;
   }
 
+  .dropdown-menu {
+    display: none;
+  }
+
   /* ! index.html */
   .mobile-nav {
     display: none;
